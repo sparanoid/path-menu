@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="star" sodipodi:version="0.32" inkscape:version="0.45.1" sodipodi:docbase="/home/uwe/Desktop" sodipodi:docname="star.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<sodipodi:namedview  width="293.9px" height="282.98px" bordercolor="#666666" inkscape:cy="100" id="base" inkscape:window-width="872" borderopacity="1.0" pagecolor="#ffffff" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="2" inkscape:cx="149.41261" inkscape:document-units="px" inkscape:current-layer="layer1" showguides="false" showgrid="true" showborder="true" inkscape:showpageshadow="true" borderlayer="false" inkscape:window-height="624" inkscape:window-x="71" inkscape:window-y="47">
+	</sodipodi:namedview>
+<g id="layer1" transform="translate(-156.02455,-156.34725)" inkscape:groupmode="layer" inkscape:label="Ebene 1">
+	
+		<path id="path2160" sodipodi:type="star" sodipodi:sides="5" sodipodi:cx="197.14285" sodipodi:cy="155.21933" sodipodi:r1="50.377609" sodipodi:r2="132.57266" sodipodi:arg1="0.9229849" inkscape:flatsided="false" sodipodi:arg2="1.5513034" inkscape:rounded="3.1225023e-17" inkscape:randomized="0" fill="#FFFFFF" d="
+		M167.071,166.226l1.906,6.115l-4.949-3.791l-4.944,3.797l1.901-6.117l-4.96-3.768l6.123,0.012l1.875-6.127l1.879,6.121l6.123-0.016
+		L167.071,166.226z"/>
+</g>
+</svg>

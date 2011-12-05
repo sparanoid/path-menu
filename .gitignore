@@ -1,0 +1,16 @@
+# TUNGHSIAO LIU'S FAVORITE GITIGNORE
+
+# Mac OS X files
+.DS_Store
+
+# Image, font original files
+*.psd
+*.ai
+
+# Logs, Leftovers
+*.log
+!errors.log
+*.bak
+*.tmproj
+*.esproj
+*.sublime*

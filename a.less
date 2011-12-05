@@ -1,0 +1,255 @@
+/*
+
+  by Tunghsiao Liu
+  sparanoid.com
+
+*/
+
+:root {
+  padding: 60px;
+  background: #f9f4f0;
+  font-family: Helvetica, 'Hiragino Sans GB', Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+
+* { margin: 0; padding: 0; text-decoration: none; }
+
+@rate: 18deg;
+
+@d1: @rate * 0;
+@d2: @rate * 1;
+@d3: @rate * 2;
+@d4: @rate * 3;
+@d5: @rate * 4;
+@d6: @rate * 5;
+
+.animation (@var) {
+  -webkit-animation: @arguments;
+     -moz-animation: @arguments;
+      -ms-animation: @arguments;
+       -o-animation: @arguments;
+          animation: @arguments;
+}
+
+.animation-delay (@var) {
+  -webkit-animation-delay: @arguments;
+     -moz-animation-delay: @arguments;
+      -ms-animation-delay: @arguments;
+       -o-animation-delay: @arguments;
+          animation-delay: @arguments;
+}
+
+.transform (@var) {
+  -webkit-transform: @arguments;
+     -moz-transform: @arguments;
+      -ms-transform: @arguments;
+       -o-transform: @arguments;
+          transform: @arguments;
+}
+
+.flip {
+    display: none;
+}
+
+#testfield {
+  width: 210px;
+  margin: 0 auto;
+  //background: #fff;
+  h1 {
+    background: #f1e7de;
+    border-radius: 4px;
+    border: 1px solid #d3bfae;
+    padding: 10px;
+    margin: 20px 0 10px;
+    font-size: 12px;
+    color: #6d492a;
+    text-shadow: #fff 0 1px 1px;
+    box-shadow: inset #fff 0 1px 0 0;
+    a {
+      color: #6d492a;
+      border-bottom: 1px dotted #d3bfae;
+      &:hover {
+        border-color: #6d492a;
+      }
+    }
+  }
+  .flyout-wrap {
+    height: 191px;
+    position: relative;
+    .flyout {
+      position: relative;
+      margin: 0 0 1px 6px;
+      & > li {
+        position: absolute;
+        background: yellow;
+        height: 170px;
+        display: block;
+        -webkit-transform-origin: 25px / 2 bottom;
+           -moz-transform-origin: 25px / 2 bottom;
+                transform-origin: 25px / 2 bottom;
+        &:nth-of-type(1) { .transform(rotate(@d1)); }
+        &:nth-of-type(2) { .transform(rotate(@d2)); }
+        &:nth-of-type(3) { .transform(rotate(@d3)); }
+        &:nth-of-type(4) { .transform(rotate(@d4)); }
+        &:nth-of-type(5) { .transform(rotate(@d5)); }
+        &:nth-of-type(6) { .transform(rotate(@d6)); }
+        a {
+          position: absolute;
+          display: block;
+          border-radius: 50%;
+          height: 26px;
+          width:  26px;
+          border: 3px solid #fff;
+          box-shadow: rgba(0, 0, 0, .4) 0 0 5px 0, rgba(0, 0, 0, .2) 0 0 0 1px, inset rgba(0, 0, 0, .5) 0 0 2px 0;
+          text-indent: -99999px;
+          overflow: hidden;
+          background: #444;
+          opacity: 0;
+          span {
+            display: block;
+            height: 26px;
+            width:  26px;
+            background: url(usr.png) no-repeat center center;
+            background-size: 16px 16px;
+            //-webkit-mask-image: url(star.svg);
+          }
+        }
+      }
+    }
+    .flyout-init {
+      display: none;
+    }
+    .flyout.expand li a {
+      .animation(expand .6s ease 1 backwards);
+      top: 10px;
+      opacity: 1;
+    }
+    .flyout li a {
+      .animation(contract .35s ease-out 1 backwards);
+      top: 150px;
+      opacity: 1;
+    }
+    .flyout.expand li:nth-of-type(1) a { .animation-delay(.00s); }
+    .flyout.expand li:nth-of-type(2) a { .animation-delay(.04s); }
+    .flyout.expand li:nth-of-type(3) a { .animation-delay(.08s); }
+    .flyout.expand li:nth-of-type(4) a { .animation-delay(.12s); }
+    .flyout.expand li:nth-of-type(5) a { .animation-delay(.16s); }
+    .flyout.expand li:nth-of-type(6) a { .animation-delay(.20s); }
+    .flyout.expand li:nth-of-type(1) a span { .transform(rotate(-@d1)); .animation(spin1-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(2) a span { .transform(rotate(-@d2)); .animation(spin2-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(3) a span { .transform(rotate(-@d3)); .animation(spin3-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(4) a span { .transform(rotate(-@d4)); .animation(spin4-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(5) a span { .transform(rotate(-@d5)); .animation(spin5-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(6) a span { .transform(rotate(-@d6)); .animation(spin6-expand .6s ease-out 1 backwards); }
+    .flyout li:nth-of-type(1) a { .animation-delay(.20s); }
+    .flyout li:nth-of-type(2) a { .animation-delay(.16s); }
+    .flyout li:nth-of-type(3) a { .animation-delay(.12s); }
+    .flyout li:nth-of-type(4) a { .animation-delay(.08s); }
+    .flyout li:nth-of-type(5) a { .animation-delay(.04s); }
+    .flyout li:nth-of-type(6) a { .animation-delay(.00s); }
+    .flyout li:nth-of-type(1) a span { .animation(spin1-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(2) a span { .animation(spin2-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(3) a span { .animation(spin3-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(4) a span { .animation(spin4-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(5) a span { .animation(spin5-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(6) a span { .animation(spin6-contract .9s ease-out 1 backwards); }
+
+    .flyout-btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      height: 36px;
+      width:  36px;
+      border: 4px solid #fff;
+      box-shadow: rgba(0, 0, 0, .3) 0 3px 8px 0, rgba(0, 0, 0, .2) 0 0 0 1px, inset rgba(0, 0, 0, .3) 0 0 0 1px, inset rgba(255, 255, 255, .3) 0 1px 0 1px;
+      text-indent: -99999px;
+      overflow: hidden;
+      background: #f76f54;
+      background: -webkit-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background: -moz-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background: -o-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background: -ms-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background: linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      z-index: 9999;
+      outline: none;
+    }
+      .flyout-btn span {
+        display: block;
+        height: 36px;
+        width:  36px;
+        background: url(cross.svg) no-repeat center center;
+        -webkit-transition: -webkit-transform .4s ease;
+           -moz-transition:    -moz-transform .4s ease;
+                transition:         transform .4s ease;
+      }
+        .flyout-btn.btn-rotate span {
+          .transform(rotate(-135deg)); 
+        }
+
+    // a workaround solution since Less doesn't support parametric mixins well
+    .ani-expand {
+      0%   { top: 150px; }
+      50%  { top: -10px; }
+      70%  { top: 15px; }
+      100% { top: 10px; }
+    }
+    .ani-contract {
+      0%   { top: 10px; }
+      40%  { top: -25px; }
+      100% { top: 150px; }
+    }
+    @-webkit-keyframes expand   { .ani-expand }
+       @-moz-keyframes expand   { .ani-expand }
+    @-webkit-keyframes contract { .ani-contract }
+       @-moz-keyframes contract { .ani-contract }
+
+    .ani-spin1-expand   { 0% { .transform(rotate(0 - @d1)); } 60% { .transform(rotate(-360deg - @d1)); } 100% { .transform(rotate(-360deg - @d1)); } }
+    .ani-spin2-expand   { 0% { .transform(rotate(0 - @d2)); } 60% { .transform(rotate(-360deg - @d2)); } 100% { .transform(rotate(-360deg - @d2)); } }
+    .ani-spin3-expand   { 0% { .transform(rotate(0 - @d3)); } 60% { .transform(rotate(-360deg - @d3)); } 100% { .transform(rotate(-360deg - @d3)); } }
+    .ani-spin4-expand   { 0% { .transform(rotate(0 - @d4)); } 60% { .transform(rotate(-360deg - @d4)); } 100% { .transform(rotate(-360deg - @d4)); } }
+    .ani-spin5-expand   { 0% { .transform(rotate(0 - @d5)); } 60% { .transform(rotate(-360deg - @d5)); } 100% { .transform(rotate(-360deg - @d5)); } }
+    .ani-spin6-expand   { 0% { .transform(rotate(0 - @d6)); } 60% { .transform(rotate(-360deg - @d6)); } 100% { .transform(rotate(-360deg - @d6)); } }
+    .ani-spin1-contract { 0% { .transform(rotate(0 - @d1)); } 50% { .transform(rotate( 360deg)); }       100% { .transform(rotate( 360deg)); } }
+    .ani-spin2-contract { 0% { .transform(rotate(0 - @d2)); } 50% { .transform(rotate( 360deg)); }       100% { .transform(rotate( 360deg)); } }
+    .ani-spin3-contract { 0% { .transform(rotate(0 - @d3)); } 50% { .transform(rotate( 360deg)); }       100% { .transform(rotate( 360deg)); } }
+    .ani-spin4-contract { 0% { .transform(rotate(0 - @d4)); } 50% { .transform(rotate( 360deg)); }       100% { .transform(rotate( 360deg)); } }
+    .ani-spin5-contract { 0% { .transform(rotate(0 - @d5)); } 50% { .transform(rotate( 360deg)); }       100% { .transform(rotate( 360deg)); } }
+    .ani-spin6-contract { 0% { .transform(rotate(0 - @d6)); } 50% { .transform(rotate( 360deg)); }       100% { .transform(rotate( 360deg)); } }
+
+    @-webkit-keyframes spin1-expand   { .ani-spin1-expand }
+    @-webkit-keyframes spin2-expand   { .ani-spin2-expand }
+    @-webkit-keyframes spin3-expand   { .ani-spin3-expand }
+    @-webkit-keyframes spin4-expand   { .ani-spin4-expand }
+    @-webkit-keyframes spin5-expand   { .ani-spin5-expand }
+    @-webkit-keyframes spin6-expand   { .ani-spin6-expand }
+       @-moz-keyframes spin1-expand   { .ani-spin1-expand }
+       @-moz-keyframes spin2-expand   { .ani-spin2-expand }
+       @-moz-keyframes spin3-expand   { .ani-spin3-expand }
+       @-moz-keyframes spin4-expand   { .ani-spin4-expand }
+       @-moz-keyframes spin5-expand   { .ani-spin5-expand }
+       @-moz-keyframes spin6-expand   { .ani-spin6-expand }
+    @-webkit-keyframes spin1-contract { .ani-spin1-contract }
+    @-webkit-keyframes spin2-contract { .ani-spin2-contract }
+    @-webkit-keyframes spin3-contract { .ani-spin3-contract }
+    @-webkit-keyframes spin4-contract { .ani-spin4-contract }
+    @-webkit-keyframes spin5-contract { .ani-spin5-contract }
+    @-webkit-keyframes spin6-contract { .ani-spin6-contract }
+       @-moz-keyframes spin1-contract { .ani-spin1-contract }
+       @-moz-keyframes spin2-contract { .ani-spin2-contract }
+       @-moz-keyframes spin3-contract { .ani-spin3-contract }
+       @-moz-keyframes spin4-contract { .ani-spin4-contract }
+       @-moz-keyframes spin5-contract { .ani-spin5-contract }
+       @-moz-keyframes spin6-contract { .ani-spin6-contract }
+  }
+}
+
+
+  @mixin(@intensity: 1) {
+      text-shadow:
+          for(@i:0, @i <= @intensity, @i++) {
+               @i @i 0px #000,
+          }
+      ;
+   }
