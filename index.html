@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
+
+<!-- low performance on ios devices
 <meta name=viewport content="width=device-width, initial-scale=1.0">
+-->
 
 <link rel=alternate href=/feed/ type=application/atom+xml>
 <link rel=stylesheet href=a.css >
@@ -12,24 +15,32 @@
 <div id="testfield" class="span16">
   <div class="flyout-wrap">
     <a class="flyout-btn" href="##" title="Toggle"><span>Flyout Menu Toggle</span></a>
-    <ul id="flyout-list" class="flyout flyout-init">
-      <li><a href="#" title=""><span>Item</span></a></li>
-      <li><a href="#" title=""><span>Item</span></a></li>
-      <li><a href="#" title=""><span>Item</span></a></li>
-      <li><a href="#" title=""><span>Item</span></a></li>
-      <li><a href="#" title=""><span>Item</span></a></li>
-      <li><a href="#" title=""><span>Item</span></a></li>
-    </ul><!-- .flyout-list -->
+    <ul class="flyout flyout-init">
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+      <li><a href="#"><span>Item</span></a></li>
+    </ul><!-- .flyout -->
     <script>
       $("a.flyout-btn").click(
-        function () {
+        function() {
           $(".flyout-btn").toggleClass("btn-rotate");
-          $("#flyout-list").removeClass("flyout-init").toggleClass("expand");
+          $(".flyout a").removeClass();
+          $(".flyout").removeClass("flyout-init fade").toggleClass("expand");
+        }
+      );
+      $(".flyout a").click(
+        function() {
+          $(".flyout-btn").toggleClass("btn-rotate");
+          $(".flyout").removeClass("expand").addClass("fade");
+          $(this).addClass("clicked");
         }
       );
     </script>
   </div><!-- .flyout-wrap -->
 
-  <h1>Path 2.0 Flyout Menu using CSS by <a href=/>Tunghsiao Liu</a></h1>
+  <h1><a href="https://path.com/">Path</a> 2.0 Flyout Menu using CSS by <a href=/>Tunghsiao Liu</a></h1>
   <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="tunghsiao">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 </div><!-- #testfield -->

@@ -1,9 +1,12 @@
 /*
 
-  by Tunghsiao Liu
+  Path 2.0 Flyout Menu using CSS
+  Contributed to Path by Tunghsiao Liu
   sparanoid.com
 
 */
+
+* { margin: 0; padding: 0; text-decoration: none; }
 
 :root {
   padding: 60px;
@@ -12,8 +15,6 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
 }
-
-* { margin: 0; padding: 0; text-decoration: none; }
 
 @rate: 18deg;
 
@@ -48,8 +49,12 @@
           transform: @arguments;
 }
 
-.flip {
-    display: none;
+.transition (@var) {
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+      -ms-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
 }
 
 #testfield {
@@ -58,11 +63,12 @@
   //background: #fff;
   h1 {
     background: #f1e7de;
-    border-radius: 4px;
+    border-radius: 3px;
     border: 1px solid #d3bfae;
-    padding: 10px;
+    padding: 7px 10px;
     margin: 20px 0 10px;
     font-size: 12px;
+    line-height: 1.6;
     color: #6d492a;
     text-shadow: #fff 0 1px 1px;
     box-shadow: inset #fff 0 1px 0 0;
@@ -80,6 +86,7 @@
     .flyout {
       position: relative;
       margin: 0 0 1px 6px;
+      line-height: 0;
       & > li {
         position: absolute;
         background: yellow;
@@ -105,7 +112,13 @@
           text-indent: -99999px;
           overflow: hidden;
           background: #444;
-          opacity: 0;
+          &:active {
+            background: #000;
+            border-color: #555;
+            span {
+              opacity: .3;
+            }
+          }
           span {
             display: block;
             height: 26px;
@@ -117,43 +130,49 @@
         }
       }
     }
-    .flyout-init {
-      display: none;
-    }
-    .flyout.expand li a {
-      .animation(expand .6s ease 1 backwards);
-      top: 10px;
-      opacity: 1;
-    }
-    .flyout li a {
-      .animation(contract .35s ease-out 1 backwards);
-      top: 150px;
-      opacity: 1;
-    }
-    .flyout.expand li:nth-of-type(1) a { .animation-delay(.00s); }
-    .flyout.expand li:nth-of-type(2) a { .animation-delay(.04s); }
-    .flyout.expand li:nth-of-type(3) a { .animation-delay(.08s); }
-    .flyout.expand li:nth-of-type(4) a { .animation-delay(.12s); }
-    .flyout.expand li:nth-of-type(5) a { .animation-delay(.16s); }
-    .flyout.expand li:nth-of-type(6) a { .animation-delay(.20s); }
-    .flyout.expand li:nth-of-type(1) a span { .transform(rotate(-@d1)); .animation(spin1-expand .6s ease-out 1 backwards); }
-    .flyout.expand li:nth-of-type(2) a span { .transform(rotate(-@d2)); .animation(spin2-expand .6s ease-out 1 backwards); }
-    .flyout.expand li:nth-of-type(3) a span { .transform(rotate(-@d3)); .animation(spin3-expand .6s ease-out 1 backwards); }
-    .flyout.expand li:nth-of-type(4) a span { .transform(rotate(-@d4)); .animation(spin4-expand .6s ease-out 1 backwards); }
-    .flyout.expand li:nth-of-type(5) a span { .transform(rotate(-@d5)); .animation(spin5-expand .6s ease-out 1 backwards); }
-    .flyout.expand li:nth-of-type(6) a span { .transform(rotate(-@d6)); .animation(spin6-expand .6s ease-out 1 backwards); }
-    .flyout li:nth-of-type(1) a { .animation-delay(.20s); }
-    .flyout li:nth-of-type(2) a { .animation-delay(.16s); }
-    .flyout li:nth-of-type(3) a { .animation-delay(.12s); }
-    .flyout li:nth-of-type(4) a { .animation-delay(.08s); }
-    .flyout li:nth-of-type(5) a { .animation-delay(.04s); }
-    .flyout li:nth-of-type(6) a { .animation-delay(.00s); }
-    .flyout li:nth-of-type(1) a span { .animation(spin1-contract .9s ease-out 1 backwards); }
-    .flyout li:nth-of-type(2) a span { .animation(spin2-contract .9s ease-out 1 backwards); }
-    .flyout li:nth-of-type(3) a span { .animation(spin3-contract .9s ease-out 1 backwards); }
-    .flyout li:nth-of-type(4) a span { .animation(spin4-contract .9s ease-out 1 backwards); }
-    .flyout li:nth-of-type(5) a span { .animation(spin5-contract .9s ease-out 1 backwards); }
-    .flyout li:nth-of-type(6) a span { .animation(spin6-contract .9s ease-out 1 backwards); }
+
+    // triggers
+    // LESS doesn't support loops and parametric mixins very well,
+    // a workaround solution: use Textmate
+    .flyout-init li                                 { display: none; }
+    .flyout.expand li a                             { .animation(expand .6s ease 1 backwards);        top: 10px; }
+    .flyout li a                                    { .animation(contract .35s ease-out 1 backwards); top: 150px; }
+    .flyout.fade li a.clicked                       { .animation(clicked .5s ease-out 1 forwards);    top: 10px; }
+    .flyout.fade li a:not(.clicked)                 { .animation(fade .5s ease-out 1 forwards);       top: 10px; 
+                                                      span { .transition(opacity .3s ease); opacity: .1; }
+                                                    }
+
+    .flyout.fade li a:not(.clicked) span            { opacity: .1; -webkit-transition: opacity 1.5s ease; }
+    .flyout li:nth-of-type(1) a                     { .animation-delay(.20s); }
+    .flyout li:nth-of-type(2) a                     { .animation-delay(.16s); }
+    .flyout li:nth-of-type(3) a                     { .animation-delay(.12s); }
+    .flyout li:nth-of-type(4) a                     { .animation-delay(.08s); }
+    .flyout li:nth-of-type(5) a                     { .animation-delay(.04s); }
+    .flyout li:nth-of-type(6) a                     { .animation-delay(.00s); }
+    .flyout li:nth-of-type(1) a:not(.clicked) span  { .animation(spin1-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(2) a:not(.clicked) span  { .animation(spin2-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(3) a:not(.clicked) span  { .animation(spin3-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(4) a:not(.clicked) span  { .animation(spin4-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(5) a:not(.clicked) span  { .animation(spin5-contract .9s ease-out 1 backwards); }
+    .flyout li:nth-of-type(6) a:not(.clicked) span  { .animation(spin6-contract .9s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(1) a              { .animation-delay(.00s); }
+    .flyout.expand li:nth-of-type(2) a              { .animation-delay(.04s); }
+    .flyout.expand li:nth-of-type(3) a              { .animation-delay(.08s); }
+    .flyout.expand li:nth-of-type(4) a              { .animation-delay(.12s); }
+    .flyout.expand li:nth-of-type(5) a              { .animation-delay(.16s); }
+    .flyout.expand li:nth-of-type(6) a              { .animation-delay(.20s); }
+    .flyout.expand li:nth-of-type(1) a span         { .transform(rotate(-@d1)); .animation(spin1-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(2) a span         { .transform(rotate(-@d2)); .animation(spin2-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(3) a span         { .transform(rotate(-@d3)); .animation(spin3-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(4) a span         { .transform(rotate(-@d4)); .animation(spin4-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(5) a span         { .transform(rotate(-@d5)); .animation(spin5-expand .6s ease-out 1 backwards); }
+    .flyout.expand li:nth-of-type(6) a span         { .transform(rotate(-@d6)); .animation(spin6-expand .6s ease-out 1 backwards); }
+    .flyout.fade li:nth-of-type(1) a.clicked span   { .transform(rotate(-@d1)); }
+    .flyout.fade li:nth-of-type(2) a.clicked span   { .transform(rotate(-@d2)); }
+    .flyout.fade li:nth-of-type(3) a.clicked span   { .transform(rotate(-@d3)); }
+    .flyout.fade li:nth-of-type(4) a.clicked span   { .transform(rotate(-@d4)); }
+    .flyout.fade li:nth-of-type(5) a.clicked span   { .transform(rotate(-@d5)); }
+    .flyout.fade li:nth-of-type(6) a.clicked span   { .transform(rotate(-@d6)); }
 
     .flyout-btn {
       position: absolute;
@@ -168,14 +187,16 @@
       overflow: hidden;
       background: #f76f54;
       background: -webkit-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
-      background: -moz-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
-      background: -o-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
-      background: -ms-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
-      background: linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background:    -moz-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background:     -ms-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background:      -o-linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
+      background:         linear-gradient(top, #f76f54 0%,#dd3535 49%,#d32121 51%,#c61f1f 100%);
       z-index: 9999;
       outline: none;
-    }
-      .flyout-btn span {
+      &:hover {
+        // never mind
+      }
+      span {
         display: block;
         height: 36px;
         width:  36px;
@@ -184,11 +205,11 @@
            -moz-transition:    -moz-transform .4s ease;
                 transition:         transform .4s ease;
       }
-        .flyout-btn.btn-rotate span {
-          .transform(rotate(-135deg)); 
-        }
+    }
+      .flyout-btn.btn-rotate span {
+        .transform(rotate(-135deg)); 
+      }
 
-    // a workaround solution since Less doesn't support parametric mixins well
     .ani-expand {
       0%   { top: 150px; }
       50%  { top: -10px; }
@@ -200,10 +221,41 @@
       40%  { top: -25px; }
       100% { top: 150px; }
     }
+    .ani-clicked {
+      0%   { -webkit-transform: scale(1); opacity: 1; }
+      100% { -webkit-transform: scale(5); opacity: 0; }
+    }
     @-webkit-keyframes expand   { .ani-expand }
        @-moz-keyframes expand   { .ani-expand }
     @-webkit-keyframes contract { .ani-contract }
        @-moz-keyframes contract { .ani-contract }
+
+    // a small trick
+    @-webkit-keyframes clicked  {
+      0%   { -webkit-transform: scale(1); opacity: 1; top: 10px; }
+      90%  {                                          top: 10px; }
+      99%  { -webkit-transform: scale(6); opacity: 0; top: 150px; }
+      100% { -webkit-transform: scale(0); }
+    }
+    @-moz-keyframes clicked  {
+      0%   { -moz-transform: scale(1); opacity: 1; top: 10px; }
+      90%  {                                       top: 10px; }
+      99%  { -moz-transform: scale(6); opacity: 0; top: 150px; }
+      100% { -moz-transform: scale(0); }
+    }
+
+    @-webkit-keyframes fade  {
+      0%   { -webkit-transform: scale(1); opacity: 1; top: 10px; }
+      90%  {                              opacity: 0; top: 10px; }
+      99%  { -webkit-transform: scale(0);             top: 150px; }
+      100% { -webkit-transform: scale(0); }
+    }
+    @-moz-keyframes fade  {
+      0%   { -moz-transform: scale(1); opacity: 1; top: 10px; }
+      90%  {                           opacity: 0; top: 10px; }
+      99%  { -moz-transform: scale(0);             top: 150px; }
+      100% { -moz-transform: scale(0); }
+    }
 
     .ani-spin1-expand   { 0% { .transform(rotate(0 - @d1)); } 60% { .transform(rotate(-360deg - @d1)); } 100% { .transform(rotate(-360deg - @d1)); } }
     .ani-spin2-expand   { 0% { .transform(rotate(0 - @d2)); } 60% { .transform(rotate(-360deg - @d2)); } 100% { .transform(rotate(-360deg - @d2)); } }
@@ -244,12 +296,3 @@
        @-moz-keyframes spin6-contract { .ani-spin6-contract }
   }
 }
-
-
-  @mixin(@intensity: 1) {
-      text-shadow:
-          for(@i:0, @i <= @intensity, @i++) {
-               @i @i 0px #000,
-          }
-      ;
-   }
