@@ -24,20 +24,16 @@
       <li><a href="#"><span>Item</span></a></li>
     </ul><!-- .flyout -->
     <script>
-      $("a.flyout-btn").click(
-        function() {
+      $(".flyout-btn").click(function() {
           $(".flyout-btn").toggleClass("btn-rotate");
-          $(".flyout a").removeClass();
+          $(".flyout").find("a").removeClass();
           $(".flyout").removeClass("flyout-init fade").toggleClass("expand");
-        }
-      );
-      $(".flyout a").click(
-        function() {
+      });
+      $(".flyout").find("a").click(function() {
           $(".flyout-btn").toggleClass("btn-rotate");
           $(".flyout").removeClass("expand").addClass("fade");
           $(this).addClass("clicked");
-        }
-      );
+      });
     </script>
   </div><!-- .flyout-wrap -->
 
