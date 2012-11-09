@@ -112,6 +112,7 @@
           text-indent: -99999px;
           overflow: hidden;
           background: #444;
+          -webkit-backface-visibility: hidden;
           &:active {
             background: #000;
             border-color: #555;
@@ -138,7 +139,7 @@
     .flyout.expand li a                             { .animation(expand .6s ease 1 backwards);        top: 10px; }
     .flyout li a                                    { .animation(contract .35s ease-out 1 backwards); top: 150px; }
     .flyout.fade li a.clicked                       { .animation(clicked .5s ease-out 1 forwards);    top: 10px; }
-    .flyout.fade li a:not(.clicked)                 { .animation(fade .5s ease-out 1 forwards);       top: 10px; 
+    .flyout.fade li a:not(.clicked)                 { .animation(fade .5s ease-out 1 forwards);       top: 10px;
                                                       span { .transition(opacity .3s ease); opacity: .1; }
                                                     }
 
@@ -207,7 +208,7 @@
       }
     }
       .flyout-btn.btn-rotate span {
-        .transform(rotate(-135deg)); 
+        .transform(rotate(-135deg));
       }
 
     .ani-expand {
