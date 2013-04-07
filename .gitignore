@@ -1,16 +1,18 @@
-# TUNGHSIAO LIU'S FAVORITE GITIGNORE
-
-# Mac OS X files
-.DS_Store
-
-# Image, font original files
-*.psd
-*.ai
-
-# Logs, Leftovers
+lib-cov
+*.seed
 *.log
-!errors.log
-*.bak
-*.tmproj
-*.esproj
-*.sublime*
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+
+node_modules
+tmp
+build
