@@ -120,7 +120,7 @@ module.exports = function(grunt) {
         src: ['build']
       },
       publish: {
-        src: ['/Users/sparanoid/Dropbox/sparanoid-web/sparanoid.com/lab/path-menu/'],
+        src: ['/Users/sparanoid/Dropbox/sparanoid-web/sparanoid.com/lab/<%= pkg.name %>/'],
         options: {
           force: true // --force is required to clean a folder outside cwd.
         }
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
       },
       publish: {
         files: [
-          {expand: true, cwd: 'build/', src: ['**'], dest: '/Users/sparanoid/Dropbox/sparanoid-web/sparanoid.com/lab/path-menu/'}
+          {expand: true, cwd: 'build/', src: ['**'], dest: '/Users/sparanoid/Dropbox/sparanoid-web/sparanoid.com/lab/<%= pkg.name %>/'}
         ]
       }
     }
