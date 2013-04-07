@@ -6,9 +6,7 @@
 -->
 
 <link rel=alternate href=/feed/ type=application/atom+xml>
-<link rel=stylesheet href=a.css >
-
-<script src=jquery.min.js></script>
+<link rel=stylesheet href=./assets/css/main.css >
 
 <title>Path 2.0 Flyout Menu using CSS by Tunghsiao Liu</title>
 
@@ -23,18 +21,6 @@
       <li><a href="#"><span>Item</span></a></li>
       <li><a href="#"><span>Item</span></a></li>
     </ul><!-- .flyout -->
-    <script>
-      $(".flyout-btn").click(function() {
-        $(".flyout-btn").toggleClass("btn-rotate");
-        $(".flyout").find("a").removeClass();
-        $(".flyout").removeClass("flyout-init fade").toggleClass("expand");
-      });
-      $(".flyout").find("a").click(function() {
-        $(".flyout-btn").toggleClass("btn-rotate");
-        $(".flyout").removeClass("expand").addClass("fade");
-        $(this).addClass("clicked");
-      });
-    </script>
   </div><!-- .flyout-wrap -->
 
   <h1>
@@ -63,3 +49,7 @@
 })();
 </script>
 <!-- End BuySellAds.com Ad Code -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="./assets/js/jquery.min.js">\x3C/script>')</script>
+<script src="./assets/js/application.min.js"></script>

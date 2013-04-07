@@ -1,0 +1,33 @@
+{
+  "name": "path-menu",
+  "version": "1.0.0",
+  "description": "Path 2.0 Flyout Menu using CSS by",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-less": "~0.5.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-connect": "~0.2.0",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-regarde": "~0.1.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sparanoid/path-menu.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Tunghsiao Liu",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "60f7e2a24c03d7c73b769ef10084644d217fbf26"
+}
