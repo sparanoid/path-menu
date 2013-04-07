@@ -119,8 +119,8 @@ module.exports = function(grunt) {
       build: {
         src: ['build']
       },
-      preview: {
-        src: ['~/Dropbox/Apps/site44/tmp.site44.com/path-menu/'],
+      publish: {
+        src: ['/Users/sparanoid/Dropbox/sparanoid-web/sparanoid.com/lab/path-menu/'],
         options: {
           force: true // --force is required to clean a folder outside cwd.
         }
@@ -130,14 +130,14 @@ module.exports = function(grunt) {
       build: {
         files: [
           { src: ['index.html'], dest: 'build/', filter: 'isFile'},
-          { src: ['assets/css/main.css'], dest: 'build/'},
+          { src: ['assets/css/**'], dest: 'build/'},
           { src: ['assets/img/**'], dest: 'build/'},
           { src: ['assets/js/*.min.js'], dest: 'build/'}
         ]
       },
-      preview: {
+      publish: {
         files: [
-          {expand: true, cwd: 'build/', src: ['**'], dest: '~/Dropbox/Apps/site44/tmp.site44.com/path-menu/'}
+          {expand: true, cwd: 'build/', src: ['**'], dest: '/Users/sparanoid/Dropbox/sparanoid-web/sparanoid.com/lab/path-menu/'}
         ]
       }
     }
@@ -162,6 +162,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['uglify', 'less:build', 'clean:build', 'copy:build']);
 
   // Client preview task(s)
-  grunt.registerTask('preview', ['build', 'clean:preview', 'copy:preview']);
+  grunt.registerTask('publish', ['build', 'clean:publish', 'copy:publish']);
 
 };
