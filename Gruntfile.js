@@ -46,8 +46,8 @@ module.exports = function(grunt) {
       },
       build: {
         options: {
-          paths: ['assets/css'],
-          yuicompress: true
+          paths: ['assets/css']
+          // yuicompress: true // doesn't work with svg data URI
         },
         files: {
           'assets/css/main.css': 'assets/css/main.less'
