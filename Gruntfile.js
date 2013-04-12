@@ -37,11 +37,11 @@ module.exports = function(grunt) {
     less: {
       dev: {
         options: {
-          paths: ['assets/css'],
+          paths: ['assets/less'],
           dumpLineNumbers: 'comments'
         },
         files: {
-          'assets/css/main.css': 'assets/css/main.less'
+          'assets/css/main.css': 'assets/less/main.less'
         }
       },
       build: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
           // yuicompress: true // doesn't work with svg data URI
         },
         files: {
-          'assets/css/main.css': 'assets/css/main.less'
+          'assets/css/main.css': 'assets/less/main.less'
         }
       }
     },
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
         tasks: ['concat', 'livereload']
       },
       less: {
-        files: 'assets/css/*.less',
+        files: 'assets/less/*.less',
         tasks: ['less:dev', 'livereload']
       }
     },
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
         }
       },
       less: {
-        files: ['assets/css/*.less'],
+        files: ['assets/less/*.less'],
         tasks: ['less:dev'],
         options: {
           nospawn: true
