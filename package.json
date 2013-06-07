@@ -28,7 +28,10 @@
     "css"
   ],
   "author": "Tunghsiao Liu",
-  "license": "BSD",
+  "license": {
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  },
   "readmeFilename": "README.md",
   "gitHead": "60f7e2a24c03d7c73b769ef10084644d217fbf26"
 }
