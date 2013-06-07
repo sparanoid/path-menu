@@ -8,3 +8,7 @@ Path 2.0 Flyout Menu using CSS (LESS)
 
 + http://twitter.com/tunghsiao
 + http://github.com/sparanoid
+
+## License
+
+Apache License, Version 2.0
