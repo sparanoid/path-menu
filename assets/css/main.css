@@ -5,13 +5,11 @@
 */
 /*!
 */
-/* line 9, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
-/* line 11, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 :root {
   padding: 60px;
   background: #f9f4f0;
@@ -19,12 +17,10 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
 }
-/* line 60, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield {
   width: 210px;
   margin: 0 auto;
 }
-/* line 64, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield h1 {
   background: #f1e7de;
   border-radius: 3px;
@@ -37,27 +33,22 @@
   text-shadow: #fff 0 1px 1px;
   box-shadow: inset #fff 0 1px 0 0;
 }
-/* line 76, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield h1 a {
   color: #6d492a;
   border-bottom: 1px dotted #d3bfae;
 }
-/* line 79, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield h1 a:hover {
   border-color: #6d492a;
 }
-/* line 84, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap {
   height: 191px;
   position: relative;
 }
-/* line 87, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout {
   position: relative;
   margin: 0 0 1px 6px;
   line-height: 0;
 }
-/* line 91, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li {
   position: absolute;
   background: yellow;
@@ -67,7 +58,6 @@
   -moz-transform-origin: 12.5px bottom;
   transform-origin: 12.5px bottom;
 }
-/* line 99, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li:nth-of-type(1) {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -75,7 +65,6 @@
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 100, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li:nth-of-type(2) {
   -webkit-transform: rotate(18deg);
   -moz-transform: rotate(18deg);
@@ -83,7 +72,6 @@
   -o-transform: rotate(18deg);
   transform: rotate(18deg);
 }
-/* line 101, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li:nth-of-type(3) {
   -webkit-transform: rotate(36deg);
   -moz-transform: rotate(36deg);
@@ -91,7 +79,6 @@
   -o-transform: rotate(36deg);
   transform: rotate(36deg);
 }
-/* line 102, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li:nth-of-type(4) {
   -webkit-transform: rotate(54deg);
   -moz-transform: rotate(54deg);
@@ -99,7 +86,6 @@
   -o-transform: rotate(54deg);
   transform: rotate(54deg);
 }
-/* line 103, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li:nth-of-type(5) {
   -webkit-transform: rotate(72deg);
   -moz-transform: rotate(72deg);
@@ -107,7 +93,6 @@
   -o-transform: rotate(72deg);
   transform: rotate(72deg);
 }
-/* line 104, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li:nth-of-type(6) {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -115,7 +100,6 @@
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-/* line 105, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li a {
   position: absolute;
   display: block;
@@ -129,16 +113,13 @@
   background: #444;
   -webkit-backface-visibility: hidden;
 }
-/* line 117, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li a:active {
   background: #000;
   border-color: #555;
 }
-/* line 120, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li a:active span {
   opacity: .3;
 }
-/* line 124, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout > li a span {
   display: block;
   height: 26px;
@@ -146,11 +127,9 @@
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px'><path fill='#fff' d='M11.045,9.879l1.906,6.114l-4.949-3.791L3.059,16l1.9-6.117L0,6.114l6.123,0.013L7.998,0l1.879,6.12L16,6.104L11.045,9.879z'/></svg>") no-repeat center center;
   background-size: 16px 16px;
 }
-/* line 139, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout-init li {
   display: none;
 }
-/* line 140, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li a {
   -webkit-animation: expand 0.6s ease 1 backwards;
   -moz-animation: expand 0.6s ease 1 backwards;
@@ -159,7 +138,6 @@
   animation: expand 0.6s ease 1 backwards;
   top: 10px;
 }
-/* line 141, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li a {
   -webkit-animation: contract 0.35s ease-out 1 backwards;
   -moz-animation: contract 0.35s ease-out 1 backwards;
@@ -168,7 +146,6 @@
   animation: contract 0.35s ease-out 1 backwards;
   top: 150px;
 }
-/* line 142, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li a.clicked {
   -webkit-animation: clicked 0.5s ease-out 1 forwards;
   -moz-animation: clicked 0.5s ease-out 1 forwards;
@@ -177,7 +154,6 @@
   animation: clicked 0.5s ease-out 1 forwards;
   top: 10px;
 }
-/* line 143, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li a:not(.clicked) {
   -webkit-animation: fade 0.5s ease-out 1 forwards;
   -moz-animation: fade 0.5s ease-out 1 forwards;
@@ -186,7 +162,6 @@
   animation: fade 0.5s ease-out 1 forwards;
   top: 10px;
 }
-/* line 144, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li a:not(.clicked) span {
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
@@ -195,12 +170,10 @@
   transition: opacity 0.3s ease;
   opacity: .1;
 }
-/* line 147, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li a:not(.clicked) span {
   opacity: .1;
   -webkit-transition: opacity 1.5s ease;
 }
-/* line 148, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(1) a {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
@@ -208,7 +181,6 @@
   -o-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-/* line 149, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(2) a {
   -webkit-animation-delay: 0.16s;
   -moz-animation-delay: 0.16s;
@@ -216,7 +188,6 @@
   -o-animation-delay: 0.16s;
   animation-delay: 0.16s;
 }
-/* line 150, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(3) a {
   -webkit-animation-delay: 0.12s;
   -moz-animation-delay: 0.12s;
@@ -224,7 +195,6 @@
   -o-animation-delay: 0.12s;
   animation-delay: 0.12s;
 }
-/* line 151, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(4) a {
   -webkit-animation-delay: 0.08s;
   -moz-animation-delay: 0.08s;
@@ -232,7 +202,6 @@
   -o-animation-delay: 0.08s;
   animation-delay: 0.08s;
 }
-/* line 152, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(5) a {
   -webkit-animation-delay: 0.04s;
   -moz-animation-delay: 0.04s;
@@ -240,7 +209,6 @@
   -o-animation-delay: 0.04s;
   animation-delay: 0.04s;
 }
-/* line 153, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(6) a {
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
@@ -248,7 +216,6 @@
   -o-animation-delay: 0s;
   animation-delay: 0s;
 }
-/* line 154, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(1) a:not(.clicked) span {
   -webkit-animation: spin1-contract 0.9s ease-out 1 backwards;
   -moz-animation: spin1-contract 0.9s ease-out 1 backwards;
@@ -256,7 +223,6 @@
   -o-animation: spin1-contract 0.9s ease-out 1 backwards;
   animation: spin1-contract 0.9s ease-out 1 backwards;
 }
-/* line 155, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(2) a:not(.clicked) span {
   -webkit-animation: spin2-contract 0.9s ease-out 1 backwards;
   -moz-animation: spin2-contract 0.9s ease-out 1 backwards;
@@ -264,7 +230,6 @@
   -o-animation: spin2-contract 0.9s ease-out 1 backwards;
   animation: spin2-contract 0.9s ease-out 1 backwards;
 }
-/* line 156, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(3) a:not(.clicked) span {
   -webkit-animation: spin3-contract 0.9s ease-out 1 backwards;
   -moz-animation: spin3-contract 0.9s ease-out 1 backwards;
@@ -272,7 +237,6 @@
   -o-animation: spin3-contract 0.9s ease-out 1 backwards;
   animation: spin3-contract 0.9s ease-out 1 backwards;
 }
-/* line 157, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(4) a:not(.clicked) span {
   -webkit-animation: spin4-contract 0.9s ease-out 1 backwards;
   -moz-animation: spin4-contract 0.9s ease-out 1 backwards;
@@ -280,7 +244,6 @@
   -o-animation: spin4-contract 0.9s ease-out 1 backwards;
   animation: spin4-contract 0.9s ease-out 1 backwards;
 }
-/* line 158, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(5) a:not(.clicked) span {
   -webkit-animation: spin5-contract 0.9s ease-out 1 backwards;
   -moz-animation: spin5-contract 0.9s ease-out 1 backwards;
@@ -288,7 +251,6 @@
   -o-animation: spin5-contract 0.9s ease-out 1 backwards;
   animation: spin5-contract 0.9s ease-out 1 backwards;
 }
-/* line 159, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout li:nth-of-type(6) a:not(.clicked) span {
   -webkit-animation: spin6-contract 0.9s ease-out 1 backwards;
   -moz-animation: spin6-contract 0.9s ease-out 1 backwards;
@@ -296,7 +258,6 @@
   -o-animation: spin6-contract 0.9s ease-out 1 backwards;
   animation: spin6-contract 0.9s ease-out 1 backwards;
 }
-/* line 160, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(1) a {
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
@@ -304,7 +265,6 @@
   -o-animation-delay: 0s;
   animation-delay: 0s;
 }
-/* line 161, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(2) a {
   -webkit-animation-delay: 0.04s;
   -moz-animation-delay: 0.04s;
@@ -312,7 +272,6 @@
   -o-animation-delay: 0.04s;
   animation-delay: 0.04s;
 }
-/* line 162, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(3) a {
   -webkit-animation-delay: 0.08s;
   -moz-animation-delay: 0.08s;
@@ -320,7 +279,6 @@
   -o-animation-delay: 0.08s;
   animation-delay: 0.08s;
 }
-/* line 163, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(4) a {
   -webkit-animation-delay: 0.12s;
   -moz-animation-delay: 0.12s;
@@ -328,7 +286,6 @@
   -o-animation-delay: 0.12s;
   animation-delay: 0.12s;
 }
-/* line 164, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(5) a {
   -webkit-animation-delay: 0.16s;
   -moz-animation-delay: 0.16s;
@@ -336,7 +293,6 @@
   -o-animation-delay: 0.16s;
   animation-delay: 0.16s;
 }
-/* line 165, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(6) a {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
@@ -344,7 +300,6 @@
   -o-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-/* line 166, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(1) a span {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -357,7 +312,6 @@
   -o-animation: spin1-expand 0.6s ease-out 1 backwards;
   animation: spin1-expand 0.6s ease-out 1 backwards;
 }
-/* line 167, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(2) a span {
   -webkit-transform: rotate(-18deg);
   -moz-transform: rotate(-18deg);
@@ -370,7 +324,6 @@
   -o-animation: spin2-expand 0.6s ease-out 1 backwards;
   animation: spin2-expand 0.6s ease-out 1 backwards;
 }
-/* line 168, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(3) a span {
   -webkit-transform: rotate(-36deg);
   -moz-transform: rotate(-36deg);
@@ -383,7 +336,6 @@
   -o-animation: spin3-expand 0.6s ease-out 1 backwards;
   animation: spin3-expand 0.6s ease-out 1 backwards;
 }
-/* line 169, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(4) a span {
   -webkit-transform: rotate(-54deg);
   -moz-transform: rotate(-54deg);
@@ -396,7 +348,6 @@
   -o-animation: spin4-expand 0.6s ease-out 1 backwards;
   animation: spin4-expand 0.6s ease-out 1 backwards;
 }
-/* line 170, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(5) a span {
   -webkit-transform: rotate(-72deg);
   -moz-transform: rotate(-72deg);
@@ -409,7 +360,6 @@
   -o-animation: spin5-expand 0.6s ease-out 1 backwards;
   animation: spin5-expand 0.6s ease-out 1 backwards;
 }
-/* line 171, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.expand li:nth-of-type(6) a span {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -422,7 +372,6 @@
   -o-animation: spin6-expand 0.6s ease-out 1 backwards;
   animation: spin6-expand 0.6s ease-out 1 backwards;
 }
-/* line 172, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li:nth-of-type(1) a.clicked span {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -430,7 +379,6 @@
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 173, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li:nth-of-type(2) a.clicked span {
   -webkit-transform: rotate(-18deg);
   -moz-transform: rotate(-18deg);
@@ -438,7 +386,6 @@
   -o-transform: rotate(-18deg);
   transform: rotate(-18deg);
 }
-/* line 174, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li:nth-of-type(3) a.clicked span {
   -webkit-transform: rotate(-36deg);
   -moz-transform: rotate(-36deg);
@@ -446,7 +393,6 @@
   -o-transform: rotate(-36deg);
   transform: rotate(-36deg);
 }
-/* line 175, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li:nth-of-type(4) a.clicked span {
   -webkit-transform: rotate(-54deg);
   -moz-transform: rotate(-54deg);
@@ -454,7 +400,6 @@
   -o-transform: rotate(-54deg);
   transform: rotate(-54deg);
 }
-/* line 176, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li:nth-of-type(5) a.clicked span {
   -webkit-transform: rotate(-72deg);
   -moz-transform: rotate(-72deg);
@@ -462,7 +407,6 @@
   -o-transform: rotate(-72deg);
   transform: rotate(-72deg);
 }
-/* line 177, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout.fade li:nth-of-type(6) a.clicked span {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -470,7 +414,6 @@
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-/* line 179, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout-btn {
   position: absolute;
   bottom: 0;
@@ -491,7 +434,6 @@
   z-index: 9999;
   outline: none;
 }
-/* line 201, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout-btn span {
   display: block;
   height: 36px;
@@ -501,7 +443,6 @@
   -moz-transition: -moz-transform 0.4s ease;
   transition: transform .4s ease;
 }
-/* line 212, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .flyout-btn.btn-rotate span {
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
@@ -509,197 +450,157 @@
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
-/* line 217, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-expand 0% {
   top: 150px;
 }
-/* line 218, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-expand 50% {
   top: -10px;
 }
-/* line 219, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-expand 70% {
   top: 15px;
 }
-/* line 220, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-expand 100% {
   top: 10px;
 }
-/* line 223, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-contract 0% {
   top: 10px;
 }
-/* line 224, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-contract 40% {
   top: -25px;
 }
-/* line 225, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-contract 100% {
   top: 150px;
 }
-/* line 228, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-clicked 0% {
   -webkit-transform: scale(1);
   opacity: 1;
 }
-/* line 229, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-clicked 100% {
   -webkit-transform: scale(5);
   opacity: 0;
 }
 @-webkit-keyframes expand {
-  /* line 217, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     top: 150px;
   }
-  /* line 218, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     top: -10px;
   }
-  /* line 219, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   70% {
     top: 15px;
   }
-  /* line 220, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     top: 10px;
   }
 }
 @-moz-keyframes expand {
-  /* line 217, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     top: 150px;
   }
-  /* line 218, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     top: -10px;
   }
-  /* line 219, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   70% {
     top: 15px;
   }
-  /* line 220, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     top: 10px;
   }
 }
 @-webkit-keyframes contract {
-  /* line 223, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     top: 10px;
   }
-  /* line 224, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   40% {
     top: -25px;
   }
-  /* line 225, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     top: 150px;
   }
 }
 @-moz-keyframes contract {
-  /* line 223, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     top: 10px;
   }
-  /* line 224, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   40% {
     top: -25px;
   }
-  /* line 225, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     top: 150px;
   }
 }
 @-webkit-keyframes clicked {
-  /* line 238, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: scale(1);
     opacity: 1;
     top: 10px;
   }
-  /* line 239, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   90% {
     top: 10px;
   }
-  /* line 240, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   99% {
     -webkit-transform: scale(6);
     opacity: 0;
     top: 150px;
   }
-  /* line 241, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: scale(0);
   }
 }
 @-moz-keyframes clicked {
-  /* line 244, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -moz-transform: scale(1);
     opacity: 1;
     top: 10px;
   }
-  /* line 245, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   90% {
     top: 10px;
   }
-  /* line 246, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   99% {
     -moz-transform: scale(6);
     opacity: 0;
     top: 150px;
   }
-  /* line 247, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -moz-transform: scale(0);
   }
 }
 @-webkit-keyframes fade {
-  /* line 251, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: scale(1);
     opacity: 1;
     top: 10px;
   }
-  /* line 252, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   90% {
     opacity: 0;
     top: 10px;
   }
-  /* line 253, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   99% {
     -webkit-transform: scale(0);
     top: 150px;
   }
-  /* line 254, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: scale(0);
   }
 }
 @-moz-keyframes fade {
-  /* line 257, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -moz-transform: scale(1);
     opacity: 1;
     top: 10px;
   }
-  /* line 258, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   90% {
     opacity: 0;
     top: 10px;
   }
-  /* line 259, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   99% {
     -moz-transform: scale(0);
     top: 150px;
   }
-  /* line 260, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -moz-transform: scale(0);
   }
 }
-/* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin1-expand 0% {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -707,7 +608,6 @@
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin1-expand 60% {
   -webkit-transform: rotate(-360deg);
   -moz-transform: rotate(-360deg);
@@ -715,7 +615,6 @@
   -o-transform: rotate(-360deg);
   transform: rotate(-360deg);
 }
-/* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin1-expand 100% {
   -webkit-transform: rotate(-360deg);
   -moz-transform: rotate(-360deg);
@@ -723,7 +622,6 @@
   -o-transform: rotate(-360deg);
   transform: rotate(-360deg);
 }
-/* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin2-expand 0% {
   -webkit-transform: rotate(-18deg);
   -moz-transform: rotate(-18deg);
@@ -731,7 +629,6 @@
   -o-transform: rotate(-18deg);
   transform: rotate(-18deg);
 }
-/* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin2-expand 60% {
   -webkit-transform: rotate(-378deg);
   -moz-transform: rotate(-378deg);
@@ -739,7 +636,6 @@
   -o-transform: rotate(-378deg);
   transform: rotate(-378deg);
 }
-/* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin2-expand 100% {
   -webkit-transform: rotate(-378deg);
   -moz-transform: rotate(-378deg);
@@ -747,7 +643,6 @@
   -o-transform: rotate(-378deg);
   transform: rotate(-378deg);
 }
-/* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin3-expand 0% {
   -webkit-transform: rotate(-36deg);
   -moz-transform: rotate(-36deg);
@@ -755,7 +650,6 @@
   -o-transform: rotate(-36deg);
   transform: rotate(-36deg);
 }
-/* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin3-expand 60% {
   -webkit-transform: rotate(-396deg);
   -moz-transform: rotate(-396deg);
@@ -763,7 +657,6 @@
   -o-transform: rotate(-396deg);
   transform: rotate(-396deg);
 }
-/* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin3-expand 100% {
   -webkit-transform: rotate(-396deg);
   -moz-transform: rotate(-396deg);
@@ -771,7 +664,6 @@
   -o-transform: rotate(-396deg);
   transform: rotate(-396deg);
 }
-/* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin4-expand 0% {
   -webkit-transform: rotate(-54deg);
   -moz-transform: rotate(-54deg);
@@ -779,7 +671,6 @@
   -o-transform: rotate(-54deg);
   transform: rotate(-54deg);
 }
-/* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin4-expand 60% {
   -webkit-transform: rotate(-414deg);
   -moz-transform: rotate(-414deg);
@@ -787,7 +678,6 @@
   -o-transform: rotate(-414deg);
   transform: rotate(-414deg);
 }
-/* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin4-expand 100% {
   -webkit-transform: rotate(-414deg);
   -moz-transform: rotate(-414deg);
@@ -795,7 +685,6 @@
   -o-transform: rotate(-414deg);
   transform: rotate(-414deg);
 }
-/* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin5-expand 0% {
   -webkit-transform: rotate(-72deg);
   -moz-transform: rotate(-72deg);
@@ -803,7 +692,6 @@
   -o-transform: rotate(-72deg);
   transform: rotate(-72deg);
 }
-/* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin5-expand 60% {
   -webkit-transform: rotate(-432deg);
   -moz-transform: rotate(-432deg);
@@ -811,7 +699,6 @@
   -o-transform: rotate(-432deg);
   transform: rotate(-432deg);
 }
-/* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin5-expand 100% {
   -webkit-transform: rotate(-432deg);
   -moz-transform: rotate(-432deg);
@@ -819,7 +706,6 @@
   -o-transform: rotate(-432deg);
   transform: rotate(-432deg);
 }
-/* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin6-expand 0% {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -827,7 +713,6 @@
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-/* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin6-expand 60% {
   -webkit-transform: rotate(-450deg);
   -moz-transform: rotate(-450deg);
@@ -835,7 +720,6 @@
   -o-transform: rotate(-450deg);
   transform: rotate(-450deg);
 }
-/* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin6-expand 100% {
   -webkit-transform: rotate(-450deg);
   -moz-transform: rotate(-450deg);
@@ -843,7 +727,6 @@
   -o-transform: rotate(-450deg);
   transform: rotate(-450deg);
 }
-/* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin1-contract 0% {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -851,7 +734,6 @@
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin1-contract 50% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -859,7 +741,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin1-contract 100% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -867,7 +748,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin2-contract 0% {
   -webkit-transform: rotate(-18deg);
   -moz-transform: rotate(-18deg);
@@ -875,7 +755,6 @@
   -o-transform: rotate(-18deg);
   transform: rotate(-18deg);
 }
-/* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin2-contract 50% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -883,7 +762,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin2-contract 100% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -891,7 +769,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin3-contract 0% {
   -webkit-transform: rotate(-36deg);
   -moz-transform: rotate(-36deg);
@@ -899,7 +776,6 @@
   -o-transform: rotate(-36deg);
   transform: rotate(-36deg);
 }
-/* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin3-contract 50% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -907,7 +783,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin3-contract 100% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -915,7 +790,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin4-contract 0% {
   -webkit-transform: rotate(-54deg);
   -moz-transform: rotate(-54deg);
@@ -923,7 +797,6 @@
   -o-transform: rotate(-54deg);
   transform: rotate(-54deg);
 }
-/* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin4-contract 50% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -931,7 +804,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin4-contract 100% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -939,7 +811,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin5-contract 0% {
   -webkit-transform: rotate(-72deg);
   -moz-transform: rotate(-72deg);
@@ -947,7 +818,6 @@
   -o-transform: rotate(-72deg);
   transform: rotate(-72deg);
 }
-/* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin5-contract 50% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -955,7 +825,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin5-contract 100% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -963,7 +832,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin6-contract 0% {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -971,7 +839,6 @@
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-/* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin6-contract 50% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -979,7 +846,6 @@
   -o-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 #testfield .flyout-wrap .ani-spin6-contract 100% {
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -988,7 +854,6 @@
   transform: rotate(360deg);
 }
 @-webkit-keyframes spin1-expand {
-  /* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -996,7 +861,6 @@
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  /* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
@@ -1004,7 +868,6 @@
     -o-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
-  /* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
@@ -1014,7 +877,6 @@
   }
 }
 @-webkit-keyframes spin2-expand {
-  /* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-18deg);
     -moz-transform: rotate(-18deg);
@@ -1022,7 +884,6 @@
     -o-transform: rotate(-18deg);
     transform: rotate(-18deg);
   }
-  /* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-378deg);
     -moz-transform: rotate(-378deg);
@@ -1030,7 +891,6 @@
     -o-transform: rotate(-378deg);
     transform: rotate(-378deg);
   }
-  /* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-378deg);
     -moz-transform: rotate(-378deg);
@@ -1040,7 +900,6 @@
   }
 }
 @-webkit-keyframes spin3-expand {
-  /* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-36deg);
     -moz-transform: rotate(-36deg);
@@ -1048,7 +907,6 @@
     -o-transform: rotate(-36deg);
     transform: rotate(-36deg);
   }
-  /* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-396deg);
     -moz-transform: rotate(-396deg);
@@ -1056,7 +914,6 @@
     -o-transform: rotate(-396deg);
     transform: rotate(-396deg);
   }
-  /* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-396deg);
     -moz-transform: rotate(-396deg);
@@ -1066,7 +923,6 @@
   }
 }
 @-webkit-keyframes spin4-expand {
-  /* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-54deg);
     -moz-transform: rotate(-54deg);
@@ -1074,7 +930,6 @@
     -o-transform: rotate(-54deg);
     transform: rotate(-54deg);
   }
-  /* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-414deg);
     -moz-transform: rotate(-414deg);
@@ -1082,7 +937,6 @@
     -o-transform: rotate(-414deg);
     transform: rotate(-414deg);
   }
-  /* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-414deg);
     -moz-transform: rotate(-414deg);
@@ -1092,7 +946,6 @@
   }
 }
 @-webkit-keyframes spin5-expand {
-  /* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-72deg);
     -moz-transform: rotate(-72deg);
@@ -1100,7 +953,6 @@
     -o-transform: rotate(-72deg);
     transform: rotate(-72deg);
   }
-  /* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-432deg);
     -moz-transform: rotate(-432deg);
@@ -1108,7 +960,6 @@
     -o-transform: rotate(-432deg);
     transform: rotate(-432deg);
   }
-  /* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-432deg);
     -moz-transform: rotate(-432deg);
@@ -1118,7 +969,6 @@
   }
 }
 @-webkit-keyframes spin6-expand {
-  /* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1126,7 +976,6 @@
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
-  /* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-450deg);
     -moz-transform: rotate(-450deg);
@@ -1134,7 +983,6 @@
     -o-transform: rotate(-450deg);
     transform: rotate(-450deg);
   }
-  /* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-450deg);
     -moz-transform: rotate(-450deg);
@@ -1144,7 +992,6 @@
   }
 }
 @-moz-keyframes spin1-expand {
-  /* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1152,7 +999,6 @@
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  /* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
@@ -1160,7 +1006,6 @@
     -o-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
-  /* line 263, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
@@ -1170,7 +1015,6 @@
   }
 }
 @-moz-keyframes spin2-expand {
-  /* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-18deg);
     -moz-transform: rotate(-18deg);
@@ -1178,7 +1022,6 @@
     -o-transform: rotate(-18deg);
     transform: rotate(-18deg);
   }
-  /* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-378deg);
     -moz-transform: rotate(-378deg);
@@ -1186,7 +1029,6 @@
     -o-transform: rotate(-378deg);
     transform: rotate(-378deg);
   }
-  /* line 264, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-378deg);
     -moz-transform: rotate(-378deg);
@@ -1196,7 +1038,6 @@
   }
 }
 @-moz-keyframes spin3-expand {
-  /* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-36deg);
     -moz-transform: rotate(-36deg);
@@ -1204,7 +1045,6 @@
     -o-transform: rotate(-36deg);
     transform: rotate(-36deg);
   }
-  /* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-396deg);
     -moz-transform: rotate(-396deg);
@@ -1212,7 +1052,6 @@
     -o-transform: rotate(-396deg);
     transform: rotate(-396deg);
   }
-  /* line 265, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-396deg);
     -moz-transform: rotate(-396deg);
@@ -1222,7 +1061,6 @@
   }
 }
 @-moz-keyframes spin4-expand {
-  /* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-54deg);
     -moz-transform: rotate(-54deg);
@@ -1230,7 +1068,6 @@
     -o-transform: rotate(-54deg);
     transform: rotate(-54deg);
   }
-  /* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-414deg);
     -moz-transform: rotate(-414deg);
@@ -1238,7 +1075,6 @@
     -o-transform: rotate(-414deg);
     transform: rotate(-414deg);
   }
-  /* line 266, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-414deg);
     -moz-transform: rotate(-414deg);
@@ -1248,7 +1084,6 @@
   }
 }
 @-moz-keyframes spin5-expand {
-  /* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-72deg);
     -moz-transform: rotate(-72deg);
@@ -1256,7 +1091,6 @@
     -o-transform: rotate(-72deg);
     transform: rotate(-72deg);
   }
-  /* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-432deg);
     -moz-transform: rotate(-432deg);
@@ -1264,7 +1098,6 @@
     -o-transform: rotate(-432deg);
     transform: rotate(-432deg);
   }
-  /* line 267, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-432deg);
     -moz-transform: rotate(-432deg);
@@ -1274,7 +1107,6 @@
   }
 }
 @-moz-keyframes spin6-expand {
-  /* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1282,7 +1114,6 @@
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
-  /* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   60% {
     -webkit-transform: rotate(-450deg);
     -moz-transform: rotate(-450deg);
@@ -1290,7 +1121,6 @@
     -o-transform: rotate(-450deg);
     transform: rotate(-450deg);
   }
-  /* line 268, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(-450deg);
     -moz-transform: rotate(-450deg);
@@ -1300,7 +1130,6 @@
   }
 }
 @-webkit-keyframes spin1-contract {
-  /* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1308,7 +1137,6 @@
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  /* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1316,7 +1144,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1326,7 +1153,6 @@
   }
 }
 @-webkit-keyframes spin2-contract {
-  /* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-18deg);
     -moz-transform: rotate(-18deg);
@@ -1334,7 +1160,6 @@
     -o-transform: rotate(-18deg);
     transform: rotate(-18deg);
   }
-  /* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1342,7 +1167,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1352,7 +1176,6 @@
   }
 }
 @-webkit-keyframes spin3-contract {
-  /* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-36deg);
     -moz-transform: rotate(-36deg);
@@ -1360,7 +1183,6 @@
     -o-transform: rotate(-36deg);
     transform: rotate(-36deg);
   }
-  /* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1368,7 +1190,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1378,7 +1199,6 @@
   }
 }
 @-webkit-keyframes spin4-contract {
-  /* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-54deg);
     -moz-transform: rotate(-54deg);
@@ -1386,7 +1206,6 @@
     -o-transform: rotate(-54deg);
     transform: rotate(-54deg);
   }
-  /* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1394,7 +1213,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1404,7 +1222,6 @@
   }
 }
 @-webkit-keyframes spin5-contract {
-  /* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-72deg);
     -moz-transform: rotate(-72deg);
@@ -1412,7 +1229,6 @@
     -o-transform: rotate(-72deg);
     transform: rotate(-72deg);
   }
-  /* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1420,7 +1236,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1430,7 +1245,6 @@
   }
 }
 @-webkit-keyframes spin6-contract {
-  /* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1438,7 +1252,6 @@
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
-  /* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1446,7 +1259,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1456,7 +1268,6 @@
   }
 }
 @-moz-keyframes spin1-contract {
-  /* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -1464,7 +1275,6 @@
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  /* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1472,7 +1282,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 269, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1482,7 +1291,6 @@
   }
 }
 @-moz-keyframes spin2-contract {
-  /* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-18deg);
     -moz-transform: rotate(-18deg);
@@ -1490,7 +1298,6 @@
     -o-transform: rotate(-18deg);
     transform: rotate(-18deg);
   }
-  /* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1498,7 +1305,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 270, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1508,7 +1314,6 @@
   }
 }
 @-moz-keyframes spin3-contract {
-  /* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-36deg);
     -moz-transform: rotate(-36deg);
@@ -1516,7 +1321,6 @@
     -o-transform: rotate(-36deg);
     transform: rotate(-36deg);
   }
-  /* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1524,7 +1328,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 271, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1534,7 +1337,6 @@
   }
 }
 @-moz-keyframes spin4-contract {
-  /* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-54deg);
     -moz-transform: rotate(-54deg);
@@ -1542,7 +1344,6 @@
     -o-transform: rotate(-54deg);
     transform: rotate(-54deg);
   }
-  /* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1550,7 +1351,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 272, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1560,7 +1360,6 @@
   }
 }
 @-moz-keyframes spin5-contract {
-  /* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-72deg);
     -moz-transform: rotate(-72deg);
@@ -1568,7 +1367,6 @@
     -o-transform: rotate(-72deg);
     transform: rotate(-72deg);
   }
-  /* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1576,7 +1374,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 273, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1586,7 +1383,6 @@
   }
 }
 @-moz-keyframes spin6-contract {
-  /* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   0% {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -1594,7 +1390,6 @@
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
-  /* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   50% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1602,7 +1397,6 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  /* line 274, /Users/sparanoid/Git/path-menu/assets/less/main.less */
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -1611,7 +1405,6 @@
     transform: rotate(360deg);
   }
 }
-/* line 303, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsap {
   position: fixed;
   top: 0;
@@ -1622,36 +1415,29 @@
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 313, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsap:hover {
   background: rgba(255, 255, 255, 0.95);
 }
-/* line 314, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsap a {
   color: #555;
 }
-/* line 315, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsap a:hover {
   color: #000;
 }
-/* line 316, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsa_it_t {
   font-size: 14px;
   display: block;
   padding: 5px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
-/* line 322, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsa_it_d {
   font-size: 12px;
   display: block;
   padding: 5px 0;
 }
-/* line 327, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsa_it_p {
   font-size: 10px;
 }
-/* line 328, /Users/sparanoid/Git/path-menu/assets/less/main.less */
 .bsa_it_p a {
   opacity: .5;
 }
