@@ -1,4 +1,4 @@
-# Path 2.0 Flyout Menu [![Build Status](https://travis-ci.org/sparanoid/path-menu.png)](https://travis-ci.org/sparanoid/path-menu) [![Node Dependencies](https://david-dm.org/sparanoid/path-menu.png)](https://david-dm.org/sparanoid/path-menu)
+# Path 2.0 Flyout Menu [![Build Status](https://travis-ci.org/sparanoid/path-menu.png)](https://travis-ci.org/sparanoid/path-menu) [![devDependency Status](https://david-dm.org/sparanoid/path-menu/dev-status.png)](https://david-dm.org/sparanoid/path-menu#info=devDependencies)
 
 Path 2.0 Flyout Menu using CSS (LESS)
 
