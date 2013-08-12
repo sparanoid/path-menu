@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Path 2.0 Flyout Menu using CSS by",
   "author": "Tunghsiao Liu",
-  "homepage": "http://sparanoid.com/lab/start/",
+  "homepage": "http://sparanoid.com/lab/path-menu/",
   "main": "Gruntfile.coffee",
   "devDependencies": {
     "grunt": "~0.4.1",
