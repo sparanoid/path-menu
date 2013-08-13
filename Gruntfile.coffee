@@ -47,6 +47,15 @@ module.exports = (grunt) ->
           src: ["<%= core.app %>/assets/coffee/main.coffee"]
 
     recess:
+      options:
+        # See: https://github.com/twitter/bootstrap/issues/6517
+        # strictPropertyOrder: false
+        noOverqualifying: false
+        # noUniversalSelectors: false
+        # noIDs: false
+        # noUnderscores: false
+        # zeroUnits: false
+
       test:
         files:
           src: ["<%= core.app %>/assets/less/main.less"]
