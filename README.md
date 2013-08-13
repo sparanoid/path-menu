@@ -6,9 +6,9 @@ Path 2.0 Flyout Menu using CSS (LESS), contributed to Path by Tunghsiao Liu
 
 **Tunghsiao Liu**
 
-+ http://twitter.com/tunghsiao
-+ http://github.com/sparanoid
+- Twitter: @[tunghsiao](http://twitter.com/tunghsiao)
+- GitHub: @[sparanoid](http://github.com/sparanoid)
 
 ## License
 
-Apache License, Version 2.0
+MIT

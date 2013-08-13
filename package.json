@@ -35,9 +35,9 @@
     "less",
     "css"
   ],
-  "license": {
-    "type": "Apache-2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  "licenses": {
+    "type": "MIT",
+    "url": "http://github.com/sparanoid/path-menu/blob/master/LICENSE"
   },
   "readmeFilename": "README.md",
   "gitHead": "60f7e2a24c03d7c73b769ef10084644d217fbf26"
