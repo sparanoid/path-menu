@@ -169,21 +169,6 @@ module.exports = (grunt) ->
         files:
           "<%= core.dist %>/assets/css/main.css": ["<%= core.dist %>/assets/css/main.css"]
 
-    imagemin:
-      server:
-        options:
-          optimizationLevel: 0
-
-        files:
-          ".tmp/assets/img/icon.png": "<%= core.app %>/assets/img/icon.png"
-
-      dist:
-        options:
-          optimizationLevel: 7
-
-        files:
-          "<%= core.dist %>/assets/img/icon.png": "<%= core.app %>/assets/img/icon.png"
-
     uglify:
       dist:
         options:
@@ -223,10 +208,10 @@ module.exports = (grunt) ->
         logConcurrentOutput: true
 
       server:
-        tasks: ["less:server", "coffee:server", "imagemin:server"]
+        tasks: ["less:server", "coffee:server"]
 
       dist:
-        tasks: ["htmlmin", "cssmin", "imagemin:dist", "uglify"]
+        tasks: ["htmlmin", "cssmin", "uglify"]
 
   grunt.registerTask "server", ["connect:livereload", "concurrent:server", "autoprefixer:server", "watch"]
   grunt.registerTask "test", ["coffeelint", "recess"]
