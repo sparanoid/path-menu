@@ -72,14 +72,14 @@ h1 {
       transform-origin: (25px / 2) bottom;
 
       // Transform loop
-      .loop (@i) when (@i < @n + 1) {
+      .generate-rotate-loop (@i) when (@i =< @n) {
 
         &:nth-of-type(@{i}) { transform: rotate(@r * (@i - 1)); }
 
-        .loop(@i + 1);
+        .generate-rotate-loop(@i + 1);
       }
 
-      .loop(1);
+      .generate-rotate-loop(1);
 
       a {
         position: absolute;
@@ -147,7 +147,7 @@ h1 {
   }
 
   // Animation loop
-  .loop (@i) when (@i < @n + 1) {
+  .generate-item-loop (@i) when (@i =< @n) {
 
     .flyout li:nth-of-type(@{i}) a                     { animation-delay: (.20s - .04s * (@i - 1)); }
     .flyout li:nth-of-type(@{i}) a:not(.clicked) span  { animation: ~"spin@{i}-contract .9s ease-out 1 backwards"; }
@@ -155,10 +155,10 @@ h1 {
     .flyout.expand li:nth-of-type(@{i}) a span         { transform: rotate(-(@r * (@i - 1))); animation: ~"spin@{i}-expand .6s ease-out 1 backwards"; }
     .flyout.fade li:nth-of-type(@{i}) a.clicked span   { transform: rotate(-(@r * (@i - 1))); }
 
-    .loop(@i + 1);
+    .generate-item-loop(@i + 1);
   }
 
-  .loop(1);
+  .generate-item-loop(1);
 
   .flyout-btn {
     position: absolute;
@@ -214,7 +214,7 @@ h1 {
   @keyframes expand   { .ani-expand }
   @keyframes contract { .ani-contract }
 
-  // a small trick
+  // A small trick
   @keyframes clicked  {
     0%   { transform: scale(1); opacity: 1; top: 10px; }
     90%  {                                  top: 10px; }
@@ -229,31 +229,32 @@ h1 {
     100% { transform: scale(0); }
   }
 
-  // LESS still don't support loop with @keyframes, more info:
-  // https://github.com/less/less.js/issues/1264
-  .ani-spin1-expand   { 0% { transform: rotate((0 - @d1)); } 60% { transform: rotate((-360deg - @d1)); } 100% { transform: rotate((-360deg - @d1)); } }
-  .ani-spin2-expand   { 0% { transform: rotate((0 - @d2)); } 60% { transform: rotate((-360deg - @d2)); } 100% { transform: rotate((-360deg - @d2)); } }
-  .ani-spin3-expand   { 0% { transform: rotate((0 - @d3)); } 60% { transform: rotate((-360deg - @d3)); } 100% { transform: rotate((-360deg - @d3)); } }
-  .ani-spin4-expand   { 0% { transform: rotate((0 - @d4)); } 60% { transform: rotate((-360deg - @d4)); } 100% { transform: rotate((-360deg - @d4)); } }
-  .ani-spin5-expand   { 0% { transform: rotate((0 - @d5)); } 60% { transform: rotate((-360deg - @d5)); } 100% { transform: rotate((-360deg - @d5)); } }
-  .ani-spin6-expand   { 0% { transform: rotate((0 - @d6)); } 60% { transform: rotate((-360deg - @d6)); } 100% { transform: rotate((-360deg - @d6)); } }
-  .ani-spin1-contract { 0% { transform: rotate((0 - @d1)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin2-contract { 0% { transform: rotate((0 - @d2)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin3-contract { 0% { transform: rotate((0 - @d3)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin4-contract { 0% { transform: rotate((0 - @d4)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin5-contract { 0% { transform: rotate((0 - @d5)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
-  .ani-spin6-contract { 0% { transform: rotate((0 - @d6)); } 50% { transform: rotate(  360deg); }        100% { transform: rotate(  360deg); } }
+  // Item animation loop
+  .loop-content(@v) {
+    @var: "d@{v}";
+    @var-bg: "homepage-bg-@{v}";
+    @var-keyframe-expand: ~"spin@{v}-expand";
+    @var-keyframe-contract: ~"spin@{v}-contract";
+  }
 
-  @keyframes spin1-expand   { .ani-spin1-expand }
-  @keyframes spin2-expand   { .ani-spin2-expand }
-  @keyframes spin3-expand   { .ani-spin3-expand }
-  @keyframes spin4-expand   { .ani-spin4-expand }
-  @keyframes spin5-expand   { .ani-spin5-expand }
-  @keyframes spin6-expand   { .ani-spin6-expand }
-  @keyframes spin1-contract { .ani-spin1-contract }
-  @keyframes spin2-contract { .ani-spin2-contract }
-  @keyframes spin3-contract { .ani-spin3-contract }
-  @keyframes spin4-contract { .ani-spin4-contract }
-  @keyframes spin5-contract { .ani-spin5-contract }
-  @keyframes spin6-contract { .ani-spin6-contract }
+  .generate-slide-loop (@i) when (@i =< @n) {
+
+    .loop-content(@i);
+
+    @keyframes @var-keyframe-expand {
+      0% { transform: rotate((0 - @@var)); }
+      60% { transform: rotate((-360deg - @@var)); }
+      100% { transform: rotate((-360deg - @@var)); }
+    }
+
+    @keyframes @var-keyframe-contract {
+      0% { transform: rotate((0 - @@var)); }
+      50% { transform: rotate(  360deg); }
+      100% { transform: rotate(  360deg); }
+    }
+
+    .generate-slide-loop(@i + 1);
+  }
+
+  .generate-slide-loop(1);
 }
