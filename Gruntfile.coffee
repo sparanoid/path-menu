@@ -145,13 +145,19 @@ module.exports = (grunt) ->
           removeCommentsFromCDATA: true
           removeCDATASectionsFromCDATA: true
           collapseWhitespace: true
+          conservativeCollapse: true
           collapseBooleanAttributes: true
-          removeAttributeQuotes: true
+          removeAttributeQuotes: false
           removeRedundantAttributes: true
           useShortDoctype: false
           removeEmptyAttributes: true
-          removeOptionalTags: false
+          removeOptionalTags: true
           removeEmptyElements: false
+          lint: false
+          keepClosingSlash: true
+          caseSensitive: true
+          minifyJS: true
+          minifyCSS: true
 
         files: [
           expand: true
@@ -213,7 +219,7 @@ module.exports = (grunt) ->
       dist:
         tasks: ["htmlmin", "cssmin", "uglify"]
 
-  grunt.registerTask "server", ["connect:livereload", "concurrent:server", "autoprefixer:server", "watch"]
+  grunt.registerTask "serve", ["connect:livereload", "concurrent:server", "autoprefixer:server", "watch"]
   grunt.registerTask "test", ["coffeelint", "recess"]
   grunt.registerTask "build", ["clean:dist", "test", "less:dist", "autoprefixer:dist", "coffee:dist", "concurrent:dist"]
   grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
