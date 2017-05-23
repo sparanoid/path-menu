@@ -1,4 +1,6 @@
 # Path 2.0 Flyout Menu
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/sparanoid/path-menu.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/sparanoid/path-menu.svg)](https://travis-ci.org/sparanoid/path-menu)
 [![devDependency Status](https://david-dm.org/sparanoid/path-menu/dev-status.svg)](https://david-dm.org/sparanoid/path-menu#info=devDependencies)
 
