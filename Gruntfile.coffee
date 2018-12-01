@@ -46,20 +46,6 @@ module.exports = (grunt) ->
         files:
           src: ["<%= core.app %>/assets/coffee/main.coffee"]
 
-    recess:
-      options:
-        # See: https://github.com/twitter/bootstrap/issues/6517
-        # strictPropertyOrder: false
-        noOverqualifying: false
-        # noUniversalSelectors: false
-        # noIDs: false
-        # noUnderscores: false
-        # zeroUnits: false
-
-      test:
-        files:
-          src: ["<%= core.app %>/assets/less/main.less"]
-
     connect:
       options:
         port: 9000
@@ -92,8 +78,8 @@ module.exports = (grunt) ->
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= recess.test.files.src %>"]
-        tasks: ["less:server", "recess", "autoprefixer:server"]
+        files: ["<%= core.app %>/assets/less/main.less"]
+        tasks: ["less:server", "autoprefixer:server"]
 
       livereload:
         options:
@@ -220,7 +206,7 @@ module.exports = (grunt) ->
         tasks: ["htmlmin", "cssmin", "uglify"]
 
   grunt.registerTask "serve", ["connect:livereload", "concurrent:server", "autoprefixer:server", "watch"]
-  grunt.registerTask "test", ["coffeelint", "recess"]
+  grunt.registerTask "test", ["coffeelint"]
   grunt.registerTask "build", ["clean:dist", "test", "less:dist", "autoprefixer:dist", "coffee:dist", "concurrent:dist"]
   grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
   grunt.registerTask "default", ["build"]
