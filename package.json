@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "Path 2.0 Flyout Menu using CSS",
   "author": "Tunghsiao Liu",
-  "homepage": "http://sparanoid.com/lab/path-menu/",
+  "homepage": "https://sparanoid.com/lab/path-menu/",
   "main": "Gruntfile.coffee",
   "devDependencies": {
     "connect-livereload": "^0.6.0",
@@ -12,7 +12,7 @@
     "grunt-concurrent": "^2.3.1",
     "grunt-coffeelint": "0.0.16",
     "grunt-contrib-clean": "~2.0.0",
-    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-coffee": "^2.0.0",
     "grunt-contrib-connect": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
@@ -35,10 +35,7 @@
     "less",
     "css"
   ],
-  "licenses": {
-    "type": "MIT",
-    "url": "http://github.com/sparanoid/path-menu/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "readmeFilename": "README.md",
   "gitHead": "60f7e2a24c03d7c73b769ef10084644d217fbf26"
 }
